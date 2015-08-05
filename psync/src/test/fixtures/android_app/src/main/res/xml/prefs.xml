@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="pref_cat_server"
+        android:title="@string/pref_cat_server"
+        >
+
+        <Preference
+            android:key="server_url"
+            android:defaultValue="@string/server_url"
+            />
+
+        <Preference
+            android:key="primary_color"
+            android:defaultValue="@color/flipboard_red"
+            />
+
+        <Preference
+            android:key="number_of_rows"
+            android:defaultValue="@integer/num_rows"
+            />
+
+        <CheckBoxPreference
+            android:key="use_inputs"
+            android:defaultValue="@bool/use_inputs"
+            />
+
+        <Preference
+            android:key="number_of_columns"
+            android:defaultValue="3"
+            />
+
+        <CheckBoxPreference
+            android:key="show_images"
+            android:defaultValue="true"
+            />
+
+        <Preference
+            android:key="request_types"
+            android:defaultValue="@array/request_types"
+            />
+
+        <Preference
+            android:key="request_agent"
+            android:defaultValue="banana"
+            />
+
+        <Preference
+            android:defaultValue="should_never_show_up"
+            />
+
+        <Preference
+            android:key="blah"
+            android:defaultValue="@dimen/should_also_not_show"
+            />
+
+        <Preference
+            android:key="should_also_never_show_up"
+            android:defaultValue="@dimen/"
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

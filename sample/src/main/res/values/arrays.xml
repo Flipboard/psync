@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="request_types">
+        <item>POST</item>
+        <item>GET</item>
+    </string-array>
+    <string-array name="request_types_entries">
+        <item>POST</item>
+        <item>GET</item>
+        <item>DELETE</item>
+        <item>PUT</item>
+    </string-array>
+    <string-array name="request_types_entry_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>

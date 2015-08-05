@@ -1,0 +1,47 @@
+/*
+ * Copyright 2015 Flipboard Inc
+ */
+apply plugin: 'com.gradle.plugin-publish'
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.tools.build:gradle:1.3.1'
+    compile 'com.google.android:android:4.1.1.4'
+    compile 'com.squareup:javapoet:1.2.0'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'com.google.guava:guava:18.0'
+    compile('io.reactivex:rxgroovy:1.0.0') {
+        exclude module: "groovy-all"
+    }
+    testCompile 'junit:junit:4.12'
+    testCompile 'com.google.truth:truth:0.27'
+    testCompile 'com.github.javaparser:javaparser-core:2.1.0'
+}
+
+// Plugin publishing
+version = project.property('VERSION')
+group = 'com.flipboard'
+
+if (project.hasProperty('gradle.publish.key')) {
+    pluginBundle {
+        website = 'https://github.com/Flipboard/psync'
+        vcsUrl = 'https://github.com/Flipboard/psync'
+        description = 'Gradle plugin that generates class representations of xml preferences'
+        tags = ['gradle', 'plugin', 'android']
+        plugins {
+            psyncPlugin {
+                id = 'com.flipboard.psync'
+                displayName = 'PSync Plugin'
+                version = project.property('VERSION')
+            }
+        }
+    }
+}
