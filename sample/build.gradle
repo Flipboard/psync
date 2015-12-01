@@ -3,7 +3,7 @@ apply plugin: 'com.flipboard.psync'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.0"
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.flipboard.psyncsample"
@@ -29,10 +29,10 @@ psync {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.0.0'
-    compile 'com.f2prateek.rx.preferences:rx-preferences:1.0.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.f2prateek.rx.preferences:rx-preferences:1.0.1'
 
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
     androidTestCompile 'com.android.support.test:runner:0.3'
-    androidTestCompile 'com.android.support:support-annotations:23.0.0'
+    androidTestCompile 'com.android.support:support-annotations:23.1.1'
 }
