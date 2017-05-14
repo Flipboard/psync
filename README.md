@@ -1,3 +1,6 @@
+### Development in this repository is stopped. Future development continues on https://github.com/hzsweers/psync
+==========================
+
 # PSync
 
 PSync is a gradle plugin for android projects to generate Java representations of xml preferences.
